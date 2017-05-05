@@ -1,5 +1,5 @@
 {
-  "name": "angular2-webpack",
+  "name": "webpack-angular4",
   "version": "1.0.0",
   "dependencies": {
     "@angular/common": "4.1.0",
@@ -15,11 +15,13 @@
     "zone.js": "0.8.10"
   },
   "scripts": {
-    "build": "node_modules/.bin/tsc --rootDir src --outDir dist",
-    "postinstall": "typings install"
+    "clear": "rm -r node_modules dist",
+    "build": "webpack --progress"
   },
   "devDependencies": {
+    "@types/core-js": "0.9.41",
     "typescript": "2.3.2",
-    "typings": "2.1.1"
+    "webpack": "2.5.0",
+    "ts-loader": "2.0.3"
   }
 }
